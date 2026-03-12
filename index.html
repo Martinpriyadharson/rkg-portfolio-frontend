@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>R.K Gowsikan | AI Engineer Portfolio</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<!-- ═══ NAV ═══════════════════════════════════════════ -->
+<nav id="navbar">
+  <div class="nav-logo">RKG</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#achievements">Achievements</a></li>
+    <li><a href="#training">Training</a></li>
+    <li><a href="#internship">Internship</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#hero"         onclick="closeMenu()">Home</a>
+  <a href="#about"        onclick="closeMenu()">About</a>
+  <a href="#skills"       onclick="closeMenu()">Skills</a>
+  <a href="#projects"     onclick="closeMenu()">Projects</a>
+  <a href="#achievements" onclick="closeMenu()">Achievements</a>
+  <a href="#training"     onclick="closeMenu()">Training</a>
+  <a href="#internship"   onclick="closeMenu()">Internship</a>
+  <a href="#contact"      onclick="closeMenu()">Contact</a>
+</div>
+
+<!-- ═══ HERO ══════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">🎓 B.Tech AI &amp; Data Science — Pre-Final Year</div>
+    <div class="hero-name">R.K Gowsikan</div>
+    <div class="hero-title">Aspiring AI Engineer &amp; App Developer</div>
+    <p class="hero-bio" id="hero-bio-text">
+      Pre-final year B.Tech student in Artificial Intelligence &amp; Data Science and App
+      Developer with hands-on experience in AI-powered public safety systems and generative AI
+      applications. I build data-driven, secure, and scalable solutions that solve real-world problems.
+    </p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn btn-primary">🚀 View Projects</a>
+      <a href="https://github.com/fgsdrte" target="_blank" class="btn btn-outline">🐙 GitHub Profile</a>
+      <a href="#contact" class="btn btn-outline">📬 Contact Me</a>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll to explore</span>
+      <div class="scroll-dot"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═════════════════════════════════════════ -->
+<section id="about">
+  <div class="section-container">
+    <div class="section-title fade-in">About Me</div>
+    <div class="section-divider"></div>
+    <div class="about-grid">
+      <div class="about-card fade-in">
+        <div class="about-avatar">
+          <img id="profile-img" src="https://ui-avatars.com/api/?name=RK+Gowsikan&background=1a73e8&color=fff&size=150" alt="R.K Gowsikan" />
+        </div>
+        <h3 id="about-name-card">R.K Gowsikan</h3>
+        <div class="role" id="about-role-card">AI Engineering Student</div>
+        <div class="about-stat"><div class="about-stat-icon">🎓</div><span>B.Tech AI &amp; Data Science</span></div>
+        <div class="about-stat"><div class="about-stat-icon">📍</div><span>Tamil Nadu, India</span></div>
+        <div class="about-stat"><div class="about-stat-icon">💼</div><span>3+ Projects Delivered</span></div>
+        <div class="about-stat"><div class="about-stat-icon">🏆</div><span>SP Commendation Award</span></div>
+        <div class="about-stat"><div class="about-stat-icon">📧</div><span>gowsikan2005raju@gmail.com</span></div>
+      </div>
+      <div class="about-text fade-in">
+        <h3>Hello, I'm Gowsikan 👋</h3>
+        <p id="about-bio-text">
+          Pre-final year B.Tech student in Artificial Intelligence &amp; Data Science and App Developer
+          with hands-on experience in AI-powered public safety systems and generative AI applications.
+          I build data-driven, secure, and scalable solutions that solve real-world problems.
+        </p>
+        <p>Strong foundation in machine learning, system design, and application development.
+           Focused on creating impactful technology through practical implementation.</p>
+        <div class="about-highlight">
+          "I believe in solving real-world problems through intelligent, scalable technology —
+          not just writing code."
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SKILLS ════════════════════════════════════════ -->
+<section id="skills">
+  <div class="section-container">
+    <div class="section-title fade-in">Skills &amp; Expertise</div>
+    <div class="section-divider"></div>
+    <div class="section-sub fade-in">Technologies and tools I work with</div>
+    <div class="skills-grid" id="skills-grid">
+      <div class="skill-category fade-in">
+        <div class="skill-cat-header"><div class="skill-cat-icon">💻</div><div class="skill-cat-title">Programming</div></div>
+        <div class="skill-item"><div class="skill-label"><span>Python</span><span>90%</span></div><div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div></div>
+        <div class="skill-item"><div class="skill-label"><span>Java</span><span>72%</span></div><div class="skill-bar"><div class="skill-fill" data-width="72%"></div></div></div>
+        <div class="skill-item"><div class="skill-label"><span>SQL</span><span>80%</span></div><div class="skill-bar"><div class="skill-fill" data-width="80%"></div></div></div>
+      </div>
+      <div class="skill-category fade-in">
+        <div class="skill-cat-header"><div class="skill-cat-icon">🤖</div><div class="skill-cat-title">AI / ML</div></div>
+        <div class="skill-item"><div class="skill-label"><span>Machine Learning</span><span>85%</span></div><div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div></div>
+        <div class="skill-item"><div class="skill-label"><span>Deep Learning</span><span>75%</span></div><div class="skill-bar"><div class="skill-fill" data-width="75%"></div></div></div>
+        <div class="skill-item"><div class="skill-label"><span>LLMs &amp; RAG Systems</span><span>78%</span></div><div class="skill-bar"><div class="skill-fill" data-width="78%"></div></div></div>
+        <div class="skill-item"><div class="skill-label"><span>Model Deployment</span><span>70%</span></div><div class="skill-bar"><div class="skill-fill" data-width="70%"></div></div></div>
+      </div>
+      <div class="skill-category fade-in">
+        <div class="skill-cat-header"><div class="skill-cat-icon">🛠️</div><div class="skill-cat-title">Tools &amp; Frameworks</div></div>
+        <div class="skill-item"><div class="skill-label"><span>Git &amp; GitHub</span><span>85%</span></div><div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div></div>
+        <div class="skill-item"><div class="skill-label"><span>Flask</span><span>80%</span></div><div class="skill-bar"><div class="skill-fill" data-width="80%"></div></div></div>
+        <div class="skill-item"><div class="skill-label"><span>Google Sheets API</span><span>75%</span></div><div class="skill-bar"><div class="skill-fill" data-width="75%"></div></div></div>
+        <div class="skill-item"><div class="skill-label"><span>MySQL</span><span>78%</span></div><div class="skill-bar"><div class="skill-fill" data-width="78%"></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROJECTS ══════════════════════════════════════ -->
+<section id="projects">
+  <div class="section-container">
+    <div class="section-title fade-in">Projects</div>
+    <div class="section-divider"></div>
+    <div class="section-sub fade-in">Real-world solutions I've built</div>
+    <div class="projects-grid" id="projects-grid">
+
+      <div class="project-card fade-in" data-proj-id="proj-0">
+        <div class="project-header">
+          <div class="project-num">01</div>
+          <div class="project-icon">🛡️</div>
+          <div class="project-title">CaseMaiyam System</div>
+          <div class="project-role">Full-Stack Developer</div>
+        </div>
+        <div class="project-body">
+          <div class="project-tech">
+            <span class="tech-tag">Python</span><span class="tech-tag">Flask</span>
+            <span class="tech-tag">JavaScript</span><span class="tech-tag">Google Sheets API</span>
+          </div>
+          <p class="project-desc">Developed a secure centralized web portal for public safety case management.
+            Designed schema-driven validation to ensure complete data integrity. Implemented Role-Based
+            Access Control and Two-Factor Authentication (TOTP). Converted a manual workflow into a
+            streamlined, auditable system.</p>
+          <div class="project-impact">🏆 Recognized by Superintendent of Police</div>
+        </div>
+        <div class="project-footer">
+          <a href="https://github.com/fgsdrte" target="_blank" class="project-link">🐙 GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card fade-in" data-proj-id="proj-1">
+        <div class="project-header">
+          <div class="project-num">02</div>
+          <div class="project-icon">📊</div>
+          <div class="project-title">Crime Flow Analyzer</div>
+          <div class="project-role">Data &amp; Analytics Developer</div>
+        </div>
+        <div class="project-body">
+          <div class="project-tech">
+            <span class="tech-tag">Python</span><span class="tech-tag">Data Analytics</span>
+            <span class="tech-tag">Visualization</span>
+          </div>
+          <p class="project-desc">Built a data-driven analysis tool to monitor crime patterns and flow trends.
+            Enabled better visualization and data-backed decision-making for authorities.</p>
+          <div class="project-impact">📈 Improved operational transparency for law enforcement</div>
+        </div>
+        <div class="project-footer">
+          <a href="https://github.com/fgsdrte" target="_blank" class="project-link">🐙 GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card fade-in" data-proj-id="proj-2">
+        <div class="project-header">
+          <div class="project-num">03</div>
+          <div class="project-icon">❤️</div>
+          <div class="project-title">Digital Twin of Human Heart</div>
+          <div class="project-role">Team Lead — Hackathon Project</div>
+        </div>
+        <div class="project-body">
+          <div class="project-tech">
+            <span class="tech-tag">AI Modeling</span><span class="tech-tag">Smartwatch API</span>
+            <span class="tech-tag">Real-time Data</span>
+          </div>
+          <p class="project-desc">Led a team to develop a real-time digital twin system to monitor patient
+            heart health using wearable device data. Focused on system integration and model deployment
+            under a 24-hour constraint.</p>
+          <div class="project-impact">⚡ Built under 24-hour hackathon constraint</div>
+        </div>
+        <div class="project-footer">
+          <a href="https://github.com/fgsdrte" target="_blank" class="project-link">🐙 GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ACHIEVEMENTS ══════════════════════════════════ -->
+<section id="achievements">
+  <div class="section-container">
+    <div class="section-title fade-in">Achievements</div>
+    <div class="section-divider"></div>
+    <div class="achievements-grid" id="achievements-grid">
+      <div class="achievement-card fade-in">
+        <div class="achievement-icon">🏆</div>
+        <div>
+          <div class="achievement-title">Special Commendation — Superintendent of Police</div>
+          <div class="achievement-desc">Received a Special Commendation from the Superintendent of Police
+            for developing the CaseMaiyam System that significantly improved public safety case management.</div>
+        </div>
+      </div>
+      <div class="achievement-card fade-in">
+        <div class="achievement-icon">⚡</div>
+        <div>
+          <div class="achievement-title">Hackathon — Digital Twin of Human Heart</div>
+          <div class="achievement-desc">Successfully led a team to design and deploy a real-time AI-driven
+            digital twin system within a 24-hour hackathon window.</div>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-title fade-in">🖼️ Achievement Gallery</div>
+    <div class="gallery-grid" id="gallery-grid">
+      <!-- Images loaded dynamically from backend -->
+      <div style="grid-column:1/-1;text-align:center;padding:2rem;color:#4a5568;font-size:0.9rem;">
+        📸 Loading gallery...
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Lightbox -->
+<div class="gallery-overlay" id="galleryOverlay" onclick="closeGallery()">
+  <button class="gallery-close" onclick="closeGallery()">✕</button>
+  <img id="galleryImg" src="" alt="Gallery Image" />
+</div>
+
+<!-- ═══ TRAINING ══════════════════════════════════════ -->
+<section id="training">
+  <div class="section-container">
+    <div class="section-title fade-in">Training &amp; Certifications</div>
+    <div class="section-divider"></div>
+    <div id="training-list">
+      <div class="training-card fade-in" data-train-id="train-0">
+        <div class="training-icon">🏭</div>
+        <div>
+          <div class="training-org">Mistral Solutions Pvt. Ltd. — Kovilpatti</div>
+          <div class="training-topic">Object Identification Behind the Abstraction</div>
+          <p class="training-desc">Attended an intensive Training Program at Mistral Solutions Pvt. Ltd.,
+            Kovilpatti, focusing on Object Identification concepts, abstraction principles, and their
+            practical applications in AI/ML systems.</p>
+          <span class="training-badge">✅ Industrial Training</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ INTERNSHIP ════════════════════════════════════ -->
+<section id="internship">
+  <div class="section-container">
+    <div class="section-title fade-in">Internship</div>
+    <div class="section-divider"></div>
+    <div id="internship-list">
+
+      <div class="internship-card fade-in" data-intern-id="intern-0">
+        <div class="internship-header">
+          <div class="internship-org-wrap">
+            <div class="internship-icon">🏛️</div>
+            <div>
+              <div class="internship-org">Thoothukudi District Police</div>
+              <div class="internship-role">Intern — AI &amp; Data Projects</div>
+            </div>
+          </div>
+          <span class="internship-badge">✅ Internship</span>
+        </div>
+        <p class="internship-desc">
+          During this internship, I worked on real-world AI and data projects deployed for
+          active use in law enforcement. Collaborated directly with police officials to
+          digitize and streamline workflows using modern technology.
+        </p>
+        <div class="internship-projects">
+          <div class="internship-proj-title">🔧 Projects Worked On:</div>
+          <div class="internship-proj-item">
+            <div class="internship-proj-name">📊 Crime Flow Analyzer</div>
+            <div class="internship-proj-desc">A web dashboard displaying crime statistics for each subdivision — enabling data-backed decision making for police authorities.</div>
+          </div>
+          <div class="internship-proj-item">
+            <div class="internship-proj-name">🛡️ Project CaseMaiyam</div>
+            <div class="internship-proj-desc">Real-Time Data Validation &amp; Visualization Framework for Police Records — converting manual workflows into a streamlined, auditable system.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══════════════════════════════════════ -->
+<section id="contact">
+  <div class="section-container">
+    <div class="section-title fade-in">Get In Touch</div>
+    <div class="section-divider"></div>
+    <div class="contact-grid">
+      <div>
+        <h3 class="fade-in">Let's Connect 🤝</h3><br>
+        <a href="mailto:gowsikan2005raju@gmail.com" class="contact-item fade-in">
+          <div class="contact-icon">📧</div>
+          <div><div class="contact-label">Email</div><div class="contact-value">gowsikan2005raju@gmail.com</div></div>
+        </a>
+        <a href="https://github.com/fgsdrte" target="_blank" class="contact-item fade-in">
+          <div class="contact-icon">🐙</div>
+          <div><div class="contact-label">GitHub</div><div class="contact-value">github.com/fgsdrte</div></div>
+        </a>
+        <a href="https://www.linkedin.com/in/gowsikan-r-k-516689289" target="_blank" class="contact-item fade-in">
+          <div class="contact-icon">💼</div>
+          <div><div class="contact-label">LinkedIn</div><div class="contact-value">linkedin.com/in/gowsikan-r-k</div></div>
+        </a>
+        <div class="contact-item fade-in">
+          <div class="contact-icon">📍</div>
+          <div><div class="contact-label">Location</div><div class="contact-value">Tamil Nadu, India</div></div>
+        </div>
+      </div>
+      <div class="contact-form-card fade-in">
+        <div class="form-title">Send a Message 💬</div>
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input type="text" id="fname" placeholder="Your name" /></div>
+          <div class="form-group"><label>Last Name</label><input type="text" id="lname" placeholder="Last name" /></div>
+        </div>
+        <div class="form-group"><label>Email</label><input type="email" id="femail" placeholder="your@email.com" /></div>
+        <div class="form-group"><label>Subject</label><input type="text" id="fsubject" placeholder="What's this about?" /></div>
+        <div class="form-group"><label>Message</label><textarea id="fmessage" placeholder="Write your message..."></textarea></div>
+        <button class="btn btn-primary" onclick="submitContact()" style="width:100%;justify-content:center;">Send Message 🚀</button>
+        <div class="form-success" id="form-success">✅ Message sent! I'll get back to you soon.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ════════════════════════════════════════ -->
+<footer>
+  <p>Designed &amp; Built by <strong style="color:#4fc3f7;">❤️ C.Martin Priyadharson</strong></p>
+  <p style="margin-top:0.5rem;">📧 <a href="mailto:priyadharsoncmartin@gmail.com">priyadharsoncmartin@gmail.com</a></p>
+</footer>
+
+<!-- ═══ THEME TOGGLE ══════════════════════════════════ -->
+<button id="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">🌙</button>
+
+<!-- ═══ ADMIN BUTTON ══════════════════════════════════ -->
+<button id="admin-toggle" onclick="openAdmin()" title="Admin Panel">⚙️</button>
+
+<!-- ═══ ADMIN MODAL ═══════════════════════════════════ -->
+<div class="admin-overlay" id="adminOverlay" onclick="closeAdminOnBg(event)">
+  <div class="admin-modal">
+    <div class="admin-header">
+      <h2>⚙️ Admin Control Panel</h2>
+      <button class="admin-close" onclick="closeAdmin()">✕</button>
+    </div>
+    <div class="admin-body">
+
+      <!-- STEP 1: Email -->
+      <div id="admin-email-view">
+        <div class="admin-login">
+          <h3>🔐 Admin Login</h3>
+          <p style="color:var(--text2);font-size:0.88rem;margin-bottom:1.2rem;text-align:center;">
+            Enter your admin email — we'll send a one-time OTP to your Gmail.
+          </p>
+          <input class="admin-input" type="email" id="admin-email-input" placeholder="Enter admin email..." />
+          <button class="admin-btn" onclick="sendLoginOTP()">📧 Send OTP to Gmail</button>
+          <div id="admin-email-err" style="color:#ef4444;font-size:0.85rem;text-align:center;margin-top:0.5rem;display:none;"></div>
+        </div>
+      </div>
+
+      <!-- STEP 2: OTP -->
+      <div id="admin-otp-view" style="display:none;">
+        <div class="admin-login">
+          <h3>📬 Check Your Gmail</h3>
+          <p style="color:var(--text2);font-size:0.88rem;margin-bottom:1.2rem;text-align:center;">
+            A 6-digit OTP has been sent to <strong id="otp-sent-to"></strong>.<br/>Valid for <strong>10 minutes</strong>.
+          </p>
+          <input class="admin-input" type="text" id="admin-otp-input" maxlength="6"
+            placeholder="Enter 6-digit OTP..."
+            style="letter-spacing:10px;font-size:1.4rem;font-weight:800;text-align:center;" />
+          <button class="admin-btn" onclick="verifyLoginOTP()">✅ Verify OTP & Login</button>
+          <button class="admin-btn"
+            style="background:transparent;color:var(--primary);border:2px solid var(--primary);margin-top:0.5rem;"
+            onclick="backToEmail()">← Back</button>
+          <div id="admin-otp-err" style="color:#ef4444;font-size:0.85rem;text-align:center;margin-top:0.5rem;display:none;"></div>
+          <p style="text-align:center;font-size:0.82rem;color:var(--text2);margin-top:1rem;">
+            Didn't receive it?
+            <span style="color:var(--primary);cursor:pointer;font-weight:600;" onclick="sendLoginOTP(true)">Resend OTP</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- DASHBOARD -->
+      <div id="admin-dashboard" style="display:none;">
+
+        <div style="display:flex;justify-content:flex-end;margin-bottom:1rem;">
+          <button class="admin-btn admin-btn-danger" style="padding:6px 14px;font-size:0.82rem;" onclick="adminLogout()">
+            🚪 Logout
+          </button>
+        </div>
+
+        <div class="admin-tabs">
+          <button class="admin-tab active" onclick="switchAdminTab('profile')">👤 Profile</button>
+          <button class="admin-tab"        onclick="switchAdminTab('gallery')">🖼️ Gallery</button>
+          <button class="admin-tab"        onclick="switchAdminTab('projects')">🚀 Projects</button>
+          <button class="admin-tab"        onclick="switchAdminTab('training')">🏭 Training</button>
+          <button class="admin-tab"        onclick="switchAdminTab('internship')">💼 Internship</button>
+          <button class="admin-tab"        onclick="switchAdminTab('messages')">
+            📬 Messages<span id="unread-badge" style="color:#1a73e8;font-weight:700;"></span>
+          </button>
+        </div>
+
+        <!-- Profile Tab -->
+        <div class="admin-tab-content active" id="tab-profile">
+          <div class="admin-section">
+            <div class="admin-section-title">Update Profile Info</div>
+            <div class="admin-form-group">
+              <label class="admin-label">Full Name</label>
+              <input class="admin-input" id="a-name" value="R.K Gowsikan" />
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">Role (shown under name)</label>
+              <input class="admin-input" id="a-role" value="AI Engineering Student" />
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">Hero Tagline</label>
+              <input class="admin-input" id="a-tagline" value="Aspiring AI Engineer &amp; App Developer" />
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">Degree / Education</label>
+              <input class="admin-input" id="a-degree" value="B.Tech AI &amp; Data Science" />
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">Location</label>
+              <input class="admin-input" id="a-location" value="Tamil Nadu, India" />
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">Projects Count</label>
+              <input class="admin-input" id="a-projects-count" value="3+ Projects Delivered" />
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">Achievement Badge</label>
+              <input class="admin-input" id="a-achievement" value="SP Commendation Award" />
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">Email (shown in About)</label>
+              <input class="admin-input" id="a-email" value="gowsikan2005raju@gmail.com" />
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">GitHub URL</label>
+              <input class="admin-input" id="a-github" value="https://github.com/fgsdrte" />
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">LinkedIn URL</label>
+              <input class="admin-input" id="a-linkedin" value="https://www.linkedin.com/in/gowsikan-r-k-516689289" />
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">Profile Photo</label>
+              <input type="file" class="admin-input" accept="image/*" onchange="updateProfileImage(event)" />
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">Bio (About section)</label>
+              <textarea class="admin-textarea" id="a-bio" style="height:100px;">Pre-final year B.Tech student in Artificial Intelligence & Data Science and App Developer with hands-on experience in AI-powered public safety systems and generative AI applications.</textarea>
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">Quote (highlighted block)</label>
+              <textarea class="admin-textarea" id="a-quote" style="height:70px;">I believe in solving real-world problems through intelligent, scalable technology — not just writing code.</textarea>
+            </div>
+            <button class="admin-btn" onclick="saveProfile()">💾 Save Profile</button>
+          </div>
+        </div>
+
+        <!-- Gallery Tab -->
+        <div class="admin-tab-content" id="tab-gallery">
+          <div class="admin-section">
+            <div class="admin-section-title">Upload Gallery Photos</div>
+
+            <!-- Caption & Description -->
+            <div class="admin-form-group">
+              <label class="admin-label">Image Title / Caption</label>
+              <input class="admin-input" id="gallery-caption-input"
+                placeholder="e.g. SP Commendation Certificate" />
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">Description (shown on hover)</label>
+              <textarea class="admin-textarea" id="gallery-desc-input"
+                placeholder="e.g. Received from Superintendent of Police for developing CaseMaiyam System..."
+                style="height:80px;"></textarea>
+            </div>
+
+            <!-- Upload Area -->
+            <div class="gallery-upload-area" onclick="document.getElementById('gallery-file-input').click()">
+              <div style="font-size:2rem;">📤</div>
+              <p style="font-weight:600;margin:0.5rem 0;">Click to upload photo</p>
+              <p style="font-size:0.8rem;color:var(--text2);">JPG, PNG, WEBP — max 5MB</p>
+              <input type="file" id="gallery-file-input" multiple accept="image/*"
+                style="display:none;" onchange="uploadGalleryImages(event)" />
+            </div>
+            <div class="uploaded-images" id="admin-gallery-preview"></div>
+          </div>
+        </div>
+
+        <!-- Projects Tab -->
+        <div class="admin-tab-content" id="tab-projects">
+          <div class="admin-section">
+
+            <!-- Existing Projects List -->
+            <div class="admin-section-title">📋 Existing Projects</div>
+            <div id="admin-projects-list" style="margin-bottom:1rem;"></div>
+
+            <!-- Add New Project -->
+            <div style="border-top:1px solid #e2e8f0;padding-top:1.2rem;margin-top:0.5rem;">
+              <div class="admin-section-title">➕ Add New Project</div>
+              <div class="admin-form-group">
+                <label class="admin-label">Project Title</label>
+                <input class="admin-input" id="p-title" placeholder="Project Name" />
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-label">Your Role</label>
+                <input class="admin-input" id="p-role" placeholder="e.g. Full-Stack Developer" />
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-label">Icon (emoji)</label>
+                <input class="admin-input" id="p-icon" placeholder="e.g. 🔧 or 🤖 or 🌐" />
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-label">Tech Stack (comma separated)</label>
+                <input class="admin-input" id="p-tech" placeholder="Python, Flask, ML" />
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-label">Description</label>
+                <textarea class="admin-textarea" id="p-desc" placeholder="Describe the project..."></textarea>
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-label">Impact Line</label>
+                <input class="admin-input" id="p-impact" placeholder="e.g. 🏆 Recognized by SP" />
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-label">GitHub URL</label>
+                <input class="admin-input" id="p-github" placeholder="https://github.com/..." />
+              </div>
+              <button class="admin-btn" onclick="addProject()">➕ Add Project</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Training Tab -->
+        <div class="admin-tab-content" id="tab-training">
+          <div class="admin-section">
+
+            <!-- Existing Training List -->
+            <div class="admin-section-title">📋 Existing Training</div>
+            <div id="admin-training-list" style="margin-bottom:1rem;"></div>
+
+            <!-- Add New Training -->
+            <div style="border-top:1px solid #e2e8f0;padding-top:1.2rem;margin-top:0.5rem;">
+              <div class="admin-section-title">➕ Add New Training</div>
+              <div class="admin-form-group">
+                <label class="admin-label">Organization</label>
+                <input class="admin-input" id="t-org" placeholder="Company / Institution" />
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-label">Topic / Course</label>
+                <input class="admin-input" id="t-topic" placeholder="Course or training topic" />
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-label">Description</label>
+                <textarea class="admin-textarea" id="t-desc" placeholder="Brief description..."></textarea>
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-label">Badge Label</label>
+                <input class="admin-input" id="t-badge" placeholder="e.g. Industrial Training" />
+              </div>
+              <button class="admin-btn" onclick="addTraining()">➕ Add Training</button>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Internship Tab -->
+        <div class="admin-tab-content" id="tab-internship">
+          <div class="admin-section">
+
+            <!-- Existing Internships List -->
+            <div class="admin-section-title">📋 Existing Internships</div>
+            <div id="admin-internship-list" style="margin-bottom:1rem;"></div>
+
+            <!-- Add New Internship -->
+            <div style="border-top:1px solid #e2e8f0;padding-top:1.2rem;margin-top:0.5rem;">
+              <div class="admin-section-title">➕ Add New Internship</div>
+              <div class="admin-form-group">
+                <label class="admin-label">Organization</label>
+                <input class="admin-input" id="i-org" placeholder="e.g. Thoothukudi District Police" />
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-label">Your Role</label>
+                <input class="admin-input" id="i-role" placeholder="e.g. AI & Data Intern" />
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-label">Duration</label>
+                <input class="admin-input" id="i-duration" placeholder="e.g. Jan 2024 – Mar 2024" />
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-label">Description</label>
+                <textarea class="admin-textarea" id="i-desc" placeholder="What did you do during the internship?"></textarea>
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-label">Projects (one per line)</label>
+                <textarea class="admin-textarea" id="i-projects"
+                  placeholder="Project Name | Project description&#10;Project Name | Project description"></textarea>
+                <small style="color:var(--text2);font-size:0.78rem;">Format: Project Name | Description (one per line)</small>
+              </div>
+              <button class="admin-btn" onclick="addInternship()">➕ Add Internship</button>
+            </div>
+          </div>
+        </div>
+
+
+
+                <!-- Messages Tab -->
+        <div class="admin-tab-content" id="tab-messages">
+          <div class="admin-section">
+            <div class="admin-section-title">📬 Contact Form Messages</div>
+            <div class="messages-list" id="messages-list">
+              <p style="color:#4a5568;font-size:0.9rem;">Loading messages…</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /admin-tabs -->
+    </div><!-- /admin-dashboard -->
+  </div><!-- /admin-body -->
+</div><!-- /admin-modal -->
+</div><!-- /admin-overlay -->
+
+<script src="script.js"></script>
+</body>
+</html>
